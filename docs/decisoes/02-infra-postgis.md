@@ -8,7 +8,7 @@ Subir PostgreSQL com PostGIS via Docker Compose como banco espacial do FARISSC, 
 
 | Data / passo | O que foi feito | Escolha | Motivo | Referência |
 |--------------|-----------------|---------|--------|------------|
-| 2026-10-01 | Orquestração do banco em container | Docker Compose (serviço `db` único) | Ambiente reproduzível no monorepo, alinhado ao plano do TCC, sem instalar PG no host | [Compose file reference](https://docs.docker.com/reference/compose-file/) |
+| 2026-10-01 | Orquestração do banco em container | Docker Compose (serviço `db` único) | Ambiente reproduzível no monorepo, sem instalar PG no host | [Compose file reference](https://docs.docker.com/reference/compose-file/) |
 | 2026-10-01 | Imagem do banco | `postgis/postgis:17-3.5` | PostgreSQL 17 + PostGIS 3.5; tag oficial atualizada em 2026-08-31 no Docker Hub | [postgis/postgis no Docker Hub](https://hub.docker.com/r/postgis/postgis/tags?name=17-3.5) |
 | 2026-10-01 | Extensões na criação do banco | `postgis`, `postgis_raster` via `/docker-entrypoint-initdb.d` | Vetores (shapefile/ETL) e rasters (MDT, mapas de risco) no mesmo SGBD | [PostGIS documentation](https://postgis.net/documentation/) |
 | 2026-10-01 | Persistência e segredos | Volume nomeado `pgdata`; credenciais em `.env` (modelo `.env.example`) | Dados sobrevivem ao restart; senha fora do Git | — |

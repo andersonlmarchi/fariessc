@@ -1,0 +1,8 @@
+# Caminhos relativos à raiz do monorepo. Ajuste para onde estão seus shapefiles.
+# Temas SIGSC: limites municipais, confluência, curso d'água, nascente, trecho de drenagem.
+
+limites_municipios: data/limites_municipios.shp
+confluencias: data/confluencia.shp
+cursos_dagua: data/curso_dagua.shp
+nascentes: data/nascente.shp
+trechos_drenagem: data/trecho_drenagem.shp
